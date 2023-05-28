@@ -39,38 +39,12 @@ const largeBox = (
   </div>
 )
 
-//box component with props extra credit 1
-// function Box({className = '', style, ...otherProps}) {
-//   return (
-//     <div
-//       className={`box ${className}`}
-//       style={{fontStyle: 'italic', ...style}}
-//       {...otherProps}
-//     />
-//   )
-// }
-
-//box component with szie props extra credit 2
-function Box({className = '', style, size, ...otherProps}) {
-  const sizeClassName = size ? `box--${size}` : ''
-  return (
-    <div
-      className={`box ${className} ${sizeClassName}`}
-      style={{fontStyle: 'italic', ...style}}
-      {...otherProps}
-    />
-  )
-}
-
 function App() {
   return (
     <div>
-      <Box size='small' style={{backgroundColor: 'lightblue'}}>
-      small lightblue box </Box>
-      <Box size='medium' style={{backgroundColor: 'pink'}}>
-      medium pink box </Box>
-      <Box size='large' style={{backgroundColor: 'orange'}}>
-      large orange box </Box>
+      {smallBox}
+      {mediumBox}
+      {largeBox}
     </div>
   )
 }
